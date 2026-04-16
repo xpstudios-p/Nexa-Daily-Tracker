@@ -1,0 +1,187 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  color: white;
+}
+
+/* GLOBAL APP */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 15px;
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  color: #6cf0ff;
+}
+
+.sub {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1c1c1c;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+/* XP */
+.xpBox {
+  margin-top: 20px;
+}
+
+.bar {
+  height: 8px;
+  background: #333;
+  border-radius: 10px;
+}
+
+#xpBar {
+  height: 8px;
+  width: 20%;
+  background: #6cf0ff;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  position: relative;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* PAGE BACKGROUNDS (DIFFERENT PER PAGE) */
+#dash {
+  background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d")
+    center/cover;
+}
+
+#tasks {
+  background: url("https://images.unsplash.com/photo-1553877522-43269d4ea984")
+    center/cover;
+}
+
+#habits {
+  background: url("https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d")
+    center/cover;
+}
+
+#calendar {
+  background: url("https://images.unsplash.com/photo-1506784983877-45594efa4cbe")
+    center/cover;
+}
+
+#chat {
+  background: url("https://images.unsplash.com/photo-1531746790731-6c087fecd65a")
+    center/cover;
+}
+
+.page {
+  min-height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+}
+
+/* TEXT */
+h1 {
+  margin-bottom: 5px;
+}
+
+.desc {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+/* INPUT */
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  border: none;
+  width: 60%;
+}
+
+/* LISTS */
+ul li {
+  background: rgba(255, 255, 255, 0.08);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* CHAT */
+#chatBox {
+  height: 300px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 10px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.active {
+  background: lime;
+  box-shadow: 0 0 20px lime;
+}
+.gamePage {
+  background: url("https://images.unsplash.com/photo-1511512578047-dfb367046420")
+    center/cover;
+  position: relative;
+}
+
+/* dark overlay so text stays visible */
+.gamePage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.gamePage > * {
+  position: relative;
+  z-index: 1;
+}
+.gameBox {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  width: fit-content;
+  margin: auto;
+}

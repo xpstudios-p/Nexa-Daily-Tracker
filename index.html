@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEXA Daily Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h2>⚡ NEXA DAILY TRACKER</h2>
+
+        <p class="sub">Build discipline. Track progress. Upgrade life.</p>
+
+        <button onclick="show('dash')">Dashboard</button>
+        <button onclick="show('tasks')">Tasks</button>
+        <button onclick="show('habits')">Habits</button>
+        <button onclick="show('calendar')">Calendar</button>
+        <button onclick="show('chat')">Pixel AI</button>
+        <button onclick="show('game')">Mini Game</button>
+        <div class="xpBox">
+          <p id="level">Level 1</p>
+          <div class="bar"><div id="xpBar"></div></div>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+      <div class="main">
+        <!-- DASHBOARD -->
+        <div id="dash" class="page">
+          <h1>Dashboard</h1>
+          <p class="desc">
+            Welcome to your control center.<br />
+            Track tasks, habits, and events — and let Pixel AI guide your focus.
+          </p>
+        </div>
+        <!-- GAME -->
+        <div id="game" class="page hidden gamePage">
+          <h1>Pixel Reflex Game</h1>
+          <p class="desc">Click the glowing box as fast as you can. Gain XP.</p>
+
+          <div class="gameBox">
+            <div id="grid"></div>
+
+            <p id="gameInfo">Press Start</p>
+            <button onclick="startGame()">Start Game</button>
+          </div>
+        </div>
+        <!-- TASKS -->
+        <div id="tasks" class="page hidden">
+          <h1>Tasks</h1>
+          <p class="desc">Complete tasks to gain XP and build consistency.</p>
+
+          <input id="taskInput" placeholder="Add a new task..." />
+          <button onclick="addTask()">Add Task</button>
+
+          <ul id="taskList"></ul>
+        </div>
+
+        <!-- HABITS -->
+        <div id="habits" class="page hidden">
+          <h1>Habits</h1>
+          <p class="desc">Daily habits build long-term discipline.</p>
+
+          <input id="habitInput" placeholder="New habit..." />
+          <button onclick="addHabit()">Add Habit</button>
+
+          <div id="habitList"></div>
+        </div>
+
+        <!-- CALENDAR -->
+        <div id="calendar" class="page hidden">
+          <h1>Calendar</h1>
+          <p class="desc">Schedule events and receive reminders.</p>
+
+          <div class="card">
+            <input type="date" id="datePick" />
+            <input type="time" id="eventTime" />
+            <input type="text" id="eventText" placeholder="Event name" />
+            <button onclick="saveEvent()">Save Event</button>
+
+            <div id="events"></div>
+          </div>
+        </div>
+
+        <!-- CHAT -->
+        <div id="chat" class="page hidden">
+          <h1>Pixel AI</h1>
+          <p class="desc">Your personal productivity assistant.</p>
+
+          <div id="chatBox"></div>
+
+          <input id="chatInput" placeholder="Ask Pixel AI..." />
+          <button onclick="send()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
